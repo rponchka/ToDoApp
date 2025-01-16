@@ -6,3 +6,11 @@
     padding: 30px;
     box-sizing: border-box;
 }
+
+.hr{
+    border: 0;
+    background-color: var(--second-color);
+    height: 2px;
+    border-radius: 5px;
+    margin-top: 25px;
+}

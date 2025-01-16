@@ -9,6 +9,7 @@ function Container() {
         <div className="container">
         <Header/>
         <Form/>
+        <hr className="hr" />
         </div>
     )
 
