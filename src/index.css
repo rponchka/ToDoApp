@@ -1,0 +1,16 @@
+@font-face {
+    font-family: coolvetica ;
+    src: url(../public/fonts/Coolvetica\ Rg.otf);
+}
+
+:root{
+    --bg-color: #1E201E;
+    --container-color: #ececec;
+    --second-color:#5C6F68;
+    --font-color: #000 ;
+    --font: coolvetica;
+}
+
+body{
+    margin: 0;
+}

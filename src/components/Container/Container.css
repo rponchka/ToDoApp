@@ -1,0 +1,6 @@
+.container{
+    width: 550px;
+    height:400px;
+    background-color:var(--container-color);
+    border-radius:15px
+}
