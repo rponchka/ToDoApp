@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import './Container.css'
 import Header from "../Header/Header";
 import Form from "../Form/Form";
 import NotFound from "../NotFound/NotFound";
 import { getFromLocalStorage } from "../../services/localStorage";
 import TasksContainer from "../TasksContainer/TasksContainer";
+import { TaskContext } from "../../App";
 
 function Container() {
 
-    const [tasks, setTasks] = useState([])
-    
+    const {tasksList} = useContext(TaskContext)
+    console.log(tasksList)
 
+    const [tasks, setTasks] = useState(tasksList)
     useEffect(() => {
-        const key = 'tasksList'
-        if(getFromLocalStorage(key)){
-        setTasks(getFromLocalStorage(key))
-        }
-    }, [])
+        setTasks(tasksList);
+        console.log(tasksList);
+        console.log(tasks);
+        
+      }, [tasksList]);
+    
 
     return(
         <div className="container">

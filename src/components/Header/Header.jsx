@@ -11,8 +11,8 @@ function Header() {
           viewBox="0 0 24 24"
           fill="none"
           stroke='#5C6F68'
-          strokelinecap="round"
-          strokelinejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           width={24}
           height={24}
           strokeWidth={3}
