@@ -3,20 +3,16 @@ import './Container.css'
 import Header from "../Header/Header";
 import Form from "../Form/Form";
 import NotFound from "../NotFound/NotFound";
-import { getFromLocalStorage } from "../../services/localStorage";
 import TasksContainer from "../TasksContainer/TasksContainer";
 import { TaskContext } from "../../App";
 
 function Container() {
 
     const {tasksList} = useContext(TaskContext)
-    console.log(tasksList)
 
     const [tasks, setTasks] = useState(tasksList)
     useEffect(() => {
         setTasks(tasksList);
-        console.log(tasksList);
-        console.log(tasks);
         
       }, [tasksList]);
     
