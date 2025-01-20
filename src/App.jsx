@@ -36,6 +36,19 @@ function App() {
     saveToLocalStorage(key ,updatedTasks)
   };
 
+  const deleteTask = (id) => {
+    const indexToRemove = tasksList.findIndex(task => task.id === id);
+    
+    if (indexToRemove !== -1) {
+      console.log(1);
+      const updatedTasks = [...tasksList]; 
+      updatedTasks.splice(indexToRemove, 1);
+      setTasks(updatedTasks);
+      saveToLocalStorage(key, updatedTasks);
+    }
+  };
+  
+
   return (
     <div className="App">
       <TaskContext.Provider
@@ -43,6 +56,7 @@ function App() {
           tasksList: tasksList,
           createTask: createNewTask,
           getTask: AccesTask,
+          removeTask: deleteTask
         }}
       >
         <Container />

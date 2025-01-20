@@ -1,5 +1,5 @@
 /* From Uiverse.io by adamgiebl */ 
-.cyberpunk-checkbox {
+.checkbox {
     appearance: none;
     width: 20px;
     height: 20px;
@@ -12,7 +12,7 @@
     cursor: pointer;
   }
   
-  .cyberpunk-checkbox:before {
+  .checkbox:before {
     content: "";
     background-color: var(--second-color);
     display: block;
@@ -26,11 +26,11 @@
     transition: all 0.3s ease-in-out;
   }
   
-  .cyberpunk-checkbox:checked:before {
+  .checkbox:checked:before {
     transform: translate(-50%, -50%) scale(1);
   }
   
-  .cyberpunk-checkbox-label {
+  .checkbox-label {
     font-size: 20px;
     color: var(--second-color);
     cursor: pointer;
@@ -39,4 +39,22 @@
     align-items: center;
     font-family: var(--font);
     padding: 5px 10px;
+    
+           
+  }
+
+  .label-text{
+    white-space: nowrap;      /* Забороняє переноси рядка */
+  overflow: hidden;         /* Приховує текст, що виходить за межі */
+  text-overflow: ellipsis;  /* Додає трикрапку */
+  width: 400px;         /* Максимальна ширина контейнера */
+  }
+
+  .btn-delete{
+    padding: 0;
+    border: 0;
+    color: #A62639;
+    cursor:  pointer;
+    background-color: transparent;
+    margin-left: 20px;
   }
